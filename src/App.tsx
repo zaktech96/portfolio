@@ -1,5 +1,4 @@
 import { ThemeProvider } from './context/ThemeContext'
-import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
@@ -9,7 +8,6 @@ function App() {
   return (
     <ThemeProvider>
       <div className="min-h-screen">
-        <Navbar />
         <main>
           <Hero />
           <About />

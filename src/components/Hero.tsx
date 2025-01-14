@@ -1,4 +1,9 @@
+import { useTheme } from '../context/ThemeContext'
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
+
 const Hero = () => {
+  const { theme, toggleTheme } = useTheme()
+
   const socialLinks = [
     {
       name: 'GitHub',
@@ -23,24 +28,32 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
       {/* Orbital elements */}
-      <div className="orbit-container">
-        <div 
-          className="orbit-element w-32 h-32 top-[15%] left-[15%] bg-green-700/40 border-green-600/50" 
-          style={{ animationDelay: '-2s' }}
-        />
-        <div 
-          className="orbit-element w-24 h-24 top-[60%] right-[20%] bg-green-700/40 border-green-600/50" 
-          style={{ animationDelay: '-4s' }}
-        />
-        <div 
-          className="orbit-element w-16 h-16 bottom-[20%] left-[25%] bg-green-700/40 border-green-600/50" 
-          style={{ animationDelay: '-6s' }}
-        />
-        <div 
-          className="orbit-element w-20 h-20 top-[30%] right-[25%] bg-green-700/40 border-green-600/50" 
-          style={{ animationDelay: '-8s' }}
-        />
-      </div>
+      
+<div className="orbit-container">
+  <div 
+    className="orbit-element w-32 h-32 top-[15%] left-[15%] bg-emerald-500/40 border-emerald-400/50" 
+    style={{ animationDelay: '-2s' }}
+  />
+  <div 
+    className="orbit-element w-24 h-24 top-[60%] right-[20%] bg-emerald-500/40 border-emerald-400/50" 
+    style={{ animationDelay: '-4s' }}
+  />
+  <div 
+    className="orbit-element w-16 h-16 bottom-[20%] left-[25%] bg-emerald-500/40 border-emerald-400/50" 
+    style={{ animationDelay: '-6s' }}
+  />
+  <div 
+    className="orbit-element w-20 h-20 top-[30%] right-[25%] bg-emerald-500/40 border-emerald-400/50" 
+    style={{ animationDelay: '-8s' }}
+  />
+</div>
+
+{/* Background blur effects */}
+<div className="absolute inset-0 -z-10">
+  <div className="absolute top-20 left-20 w-72 h-72 bg-emerald-400/30 rounded-full blur-3xl animate-pulse" />
+  <div className="absolute bottom-20 right-20 w-72 h-72 bg-emerald-400/30 rounded-full blur-3xl animate-pulse delay-1000" />
+</div>
+
 
       {/* Background blur effects */}
       <div className="absolute inset-0 -z-10">
@@ -55,6 +68,22 @@ const Hero = () => {
             <p className="text-xl md:text-2xl lg:text-3xl text-primary font-semibold tracking-wide">
               Welcome to my portfolio
             </p>
+          </div>
+
+
+             {/* Theme Toggle */}
+          <div className="mt-4">
+            <button
+              onClick={toggleTheme}
+              className="p-4 rounded-full hover:bg-muted text-foreground/80 hover:text-foreground transition-colors duration-300"
+              aria-label="Toggle theme"
+            >
+              {theme === 'dark' ? (
+                <SunIcon className="w-6 h-6" />
+              ) : (
+                <MoonIcon className="w-6 h-6" />
+              )}
+            </button>
           </div>
 
           {/* Name */}
