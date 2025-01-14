@@ -25,55 +25,70 @@ const Hero = () => {
       {/* Orbital elements */}
       <div className="orbit-container">
         <div 
-          className="orbit-element w-32 h-32 top-[15%] left-[15%]" 
+          className="orbit-element w-32 h-32 top-[15%] left-[15%] bg-green-700/40 border-green-600/50" 
           style={{ animationDelay: '-2s' }}
         />
         <div 
-          className="orbit-element w-24 h-24 top-[60%] right-[20%]" 
+          className="orbit-element w-24 h-24 top-[60%] right-[20%] bg-green-700/40 border-green-600/50" 
           style={{ animationDelay: '-4s' }}
         />
         <div 
-          className="orbit-element w-16 h-16 bottom-[20%] left-[25%]" 
+          className="orbit-element w-16 h-16 bottom-[20%] left-[25%] bg-green-700/40 border-green-600/50" 
           style={{ animationDelay: '-6s' }}
         />
         <div 
-          className="orbit-element w-20 h-20 top-[30%] right-[25%]" 
+          className="orbit-element w-20 h-20 top-[30%] right-[25%] bg-green-700/40 border-green-600/50" 
           style={{ animationDelay: '-8s' }}
         />
       </div>
 
       {/* Background blur effects */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-20 left-20 w-72 h-72 bg-green-600/30 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-green-600/30 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
       
-      {/* Content */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative -mt-16">
-        <div className="space-y-10">
-          <div className="space-y-6">
-            <p className="text-primary font-medium animate-fade-in">Welcome to my portfolio</p>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground animate-fade-in-up tracking-tight">
-              Hi, I'm <span className="gradient-text">Zakariye</span>
-            </h1>
-            <p className="hero-subtitle max-w-2xl mx-auto" style={{ animationDelay: '200ms' }}>
-              Full Stack Developer | Problem Solver | Creative Thinker
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <div className="space-y-8">
+          {/* Welcome text */}
+          <div className="inline-block bg-card/80 backdrop-blur-sm px-6 py-2 rounded-md">
+            <p className="text-xl md:text-2xl lg:text-3xl text-primary font-semibold tracking-wide">
+              Welcome to my portfolio
             </p>
           </div>
 
+          {/* Name */}
+          <div className="py-4 px-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground">
+              Hi, I'm <span className="text-primary relative inline-block">
+                Zakariye
+                <div className="absolute -bottom-3 left-0 w-full h-[2px] bg-primary/40"></div>
+              </span>
+            </h1>
+          </div>
+
+          {/* Role */}
+          <div className="py-2">
+            <h2 className="text-2xl md:text-3xl text-foreground/90">
+              <span className="font-medium">Full Stack Developer</span>
+              <span className="text-primary/60"> | </span>
+              <span className="font-medium">Problem Solver</span>
+              <span className="text-primary/60"> | </span>
+              <span className="font-medium">Creative Thinker</span>
+            </h2>
+          </div>
+
           {/* Social Links */}
-          <div className="flex justify-center gap-8 animate-fade-in-up"
-            style={{ animationDelay: '300ms' }}
-          >
+          <div className="flex justify-center gap-4">
             {socialLinks.map((link, index) => (
               <a
                 key={index}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-full bg-card hover:bg-card/80 text-foreground/90 
-                hover:text-primary transition-all duration-300 hover:-translate-y-1 
-                border border-border hover:border-primary/50 shadow-lg hover:shadow-xl"
+                className="p-3 rounded-full bg-card/80 backdrop-blur-sm hover:bg-card text-foreground/80 
+                hover:text-primary transition-all duration-300 shadow-md hover:shadow-lg 
+                hover:-translate-y-0.5"
                 aria-label={link.name}
               >
                 {link.icon}
@@ -81,17 +96,13 @@ const Hero = () => {
             ))}
           </div>
 
-          <div className="flex justify-center gap-6 animate-fade-in-up" 
-            style={{ animationDelay: '400ms' }}
-          >
+          {/* CTA Buttons */}
+          <div className="flex justify-center gap-6">
             <a 
               href="#projects" 
-              className="button-primary group flex items-center gap-2"
+              className="button-primary"
             >
-              <span>View My Work</span>
-              <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-              </svg>
+              View My Work
             </a>
             <a 
               href="#contact" 

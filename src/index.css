@@ -101,6 +101,27 @@
     @apply absolute rounded-full bg-primary/20 backdrop-blur-sm border border-primary/20;
     animation: orbit-float 6s ease-in-out infinite;
   }
+
+  .animate-typing {
+    @apply relative invisible whitespace-nowrap;
+    width: 0;
+    border-right: 2px solid currentColor;
+  }
+
+  .typing-container {
+    @apply relative inline-block;
+  }
+
+  .animate-typing-text {
+    @apply relative inline-block invisible;
+    animation: typing 2.5s steps(30, end) forwards;
+  }
+
+  .animate-typing-cursor::after {
+    @apply absolute right-0 top-0 h-full w-[2px] bg-primary;
+    content: "";
+    animation: typing-cursor 0.8s step-end infinite;
+  }
 }
 
 @keyframes orbit-spin {
@@ -149,5 +170,101 @@
 
   .animate-fade-in-up {
     animation: fade-in-up 1s ease-out forwards;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: transparent;
+  }
+  to {
+    border-right-color: currentColor;
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid;
+  width: 0;
+  animation: typewriter 2s steps(40, end) forwards,
+    blink 0.75s step-end infinite;
+}
+
+.delay-1 {
+  animation-delay: 0s;
+}
+
+.delay-2 {
+  animation-delay: 2s;
+}
+
+.delay-3 {
+  animation-delay: 4s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+    visibility: visible;
+  }
+  to {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+@keyframes typing-cursor {
+  from,
+  to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
