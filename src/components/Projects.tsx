@@ -62,8 +62,8 @@ const Projects = () => {
     },
     {
       title: "Airline tracker",
-      description: "Allows to search for flights and get the best deals using inbuilt flight api",
-      tech: ["React", "TypeScript", "Nextjs", "Tailwindcss",],
+      description: "A modern flight search application that helps users find the best deals on flights. Built with real-time flight data integration and a modern UI",  
+      tech: ["React", "TypeScript", "Nextjs", "Tailwindcss"],
       image: airlineImage,
       link: "https://airline-discount-tracker-kh1r.vercel.app/",
       github: "https://github.com/zaktech96/airline-discount-tracker"

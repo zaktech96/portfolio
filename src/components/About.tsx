@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
-  SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
+  SiNodedotjs, SiExpress, SiMongodb,
   SiGit, SiDocker, SiAmazon, SiVercel,
-  SiJavascript, SiSupabase
+  SiJavascript, SiSupabase, SiPrisma
 } from 'react-icons/si';
 import { LightBulbIcon, ChatBubbleBottomCenterTextIcon, UserGroupIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
@@ -30,7 +30,8 @@ const skills = [
       { name: 'Node.js', icon: <SiNodedotjs className="text-[#339933]" /> },
       { name: 'Express', icon: <SiExpress className="text-black dark:text-white" /> },
       { name: 'MongoDB', icon: <SiMongodb className="text-[#47A248]" /> },
-      { name: 'Supabase', icon: <SiSupabase className="text-[#3ECF8E]" /> }
+      { name: 'Supabase', icon: <SiSupabase className="text-[#3ECF8E]" /> },
+      { name: 'Prisma', icon: <SiPrisma className="text-[#2D3748]" /> }
     ]
   },
   { 
@@ -79,7 +80,7 @@ const About = () => {
           >
             <p className="text-lg text-foreground/80 leading-relaxed">
               I'm a passionate Full Stack Developer with a keen eye for design and a love for creating
-              seamless user experiences. With years of experience in web development, I specialize in
+              seamless user experiences. With years of experience in web development, I specialise in
               building modern, responsive, and scalable applications.
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed">

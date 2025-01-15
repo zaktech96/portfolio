@@ -2,6 +2,7 @@ import { useTheme } from '../context/ThemeContext'
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import { GooeyText } from './ui/gooey-text-morphing'
 import { TextScramble } from './ui/text-scramble'
+import { ScrollIndicator } from './ui/scroll-indicator'
 
 const Hero = () => {
   const { theme, toggleTheme } = useTheme()
@@ -136,19 +137,26 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex justify-center gap-6">
-            <a 
-              href="#projects" 
-              className="button-primary"
-            >
-              View My Work
-            </a>
-            <a 
-              href="#contact" 
-              className="button-secondary"
-            >
-              Get in Touch
-            </a>
+          <div className="flex flex-col gap-24">
+            <div className="flex justify-center gap-6">
+              <a 
+                href="#projects" 
+                className="button-primary"
+              >
+                View My Work
+              </a>
+              <a 
+                href="#contact" 
+                className="button-secondary"
+              >
+                Get in Touch
+              </a>
+            </div>
+
+            {/* Scroll indicator with more spacing */}
+            <div className="pb-16">
+              <ScrollIndicator />
+            </div>
           </div>
         </div>
       </div>
