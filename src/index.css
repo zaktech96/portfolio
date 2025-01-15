@@ -268,3 +268,42 @@
     width: 100%;
   }
 }
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.tech-badge {
+  @apply flex items-center gap-2 px-3 py-1.5 bg-primary/5 border border-primary/10 
+         text-primary rounded-full text-sm font-medium transition-all duration-300
+         hover:border-primary/30 hover:bg-primary/10;
+}
+
+@keyframes gooeyFade {
+  0% {
+    filter: blur(8px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.gooey-text {
+  filter: url(#gooey);
+  transition: all 0.3s ease-in-out;
+}
+
+.gooey-text.morphing {
+  animation: gooeyFade 0.3s ease-in-out;
+}

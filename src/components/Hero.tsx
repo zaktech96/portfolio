@@ -1,5 +1,7 @@
 import { useTheme } from '../context/ThemeContext'
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
+import { GooeyText } from './ui/gooey-text-morphing'
+import { TextScramble } from './ui/text-scramble'
 
 const Hero = () => {
   const { theme, toggleTheme } = useTheme()
@@ -34,10 +36,23 @@ const Hero = () => {
     }
   ]
 
-
-
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+      {/* Theme Toggle - Centered */}
+      <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+        <button
+          onClick={toggleTheme}
+          className="p-4 rounded-full hover:bg-muted text-foreground/80 hover:text-foreground transition-colors duration-300"
+          aria-label="Toggle theme"
+        >
+          {theme === 'dark' ? (
+            <SunIcon className="w-6 h-6" />
+          ) : (
+            <MoonIcon className="w-6 h-6" />
+          )}
+        </button>
+      </div>
+
       {/* Orbital elements */}
       
 <div className="orbit-container">
@@ -77,45 +92,27 @@ const Hero = () => {
           {/* Welcome text */}
           <div className="inline-block bg-card/80 backdrop-blur-sm px-6 py-2 rounded-md">
             <p className="text-xl md:text-2xl lg:text-3xl text-primary font-semibold tracking-wide">
-              Welcome to my portfolio
+     
             </p>
           </div>
 
-
-             {/* Theme Toggle */}
-          <div className="mt-4">
-            <button
-              onClick={toggleTheme}
-              className="p-4 rounded-full hover:bg-muted text-foreground/80 hover:text-foreground transition-colors duration-300"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <SunIcon className="w-6 h-6" />
-              ) : (
-                <MoonIcon className="w-6 h-6" />
-              )}
-            </button>
-          </div>
-
-          {/* Name */}
-          <div className="py-4 px-6">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground">
-              Hi, I'm <span className="text-primary relative inline-block">
-                Zakariye
-                <div className="absolute -bottom-3 left-0 w-full h-[2px] bg-primary/40"></div>
-              </span>
-            </h1>
-          </div>
+          <GooeyText 
+            texts={[
+              "Hi, I'm Zakariye",
+              "I build things for the web"
+            ]}
+            className="h-24 mb-8"
+            textClassName="text-primary font-bold"
+          />
 
           {/* Role */}
           <div className="py-2">
-            <h2 className="text-2xl md:text-3xl text-foreground/90">
-              <span className="font-medium">Software Developer</span>
-              <span className="text-primary/60"> | </span>
-              <span className="font-medium">Problem Solver</span>
-              <span className="text-primary/60"> | </span>
-              <span className="font-medium">Creative Thinker</span>
-            </h2>
+            <TextScramble
+              className="text-2xl md:text-3xl text-foreground/90 font-medium"
+              trigger={true}
+            >
+              Full Stack Developer | Problem Solver | Freelancer
+            </TextScramble>
           </div>
 
           {/* Social Links */}
