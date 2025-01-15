@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
-  SiGit, SiDocker, SiAmazon, SiVercel
+  SiGit, SiDocker, SiAmazon, SiVercel,
+  SiJavascript
 } from 'react-icons/si';
 import { LightBulbIcon, ChatBubbleBottomCenterTextIcon, UserGroupIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
@@ -15,6 +16,11 @@ const skills = [
       { name: 'React', icon: <SiReact className="text-[#61DAFB]" /> },
       { name: 'Next.js', icon: <SiNextdotjs className="text-black dark:text-white" /> },
       { name: 'TypeScript', icon: <SiTypescript className="text-[#3178C6]" /> },
+      { 
+        name: 'JavaScript', 
+        icon: <SiJavascript className="text-[#F7DF1E] bg-[#0c0c0b] rounded-sm" />,
+        textClassName: "text-black dark:text-white font-semibold"
+      },
       { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-[#06B6D4]" /> }
     ]
   },
@@ -139,7 +145,9 @@ const About = () => {
                       <div className="w-5 h-5 flex items-center justify-center">
                         {skill.icon}
                       </div>
-                      <span className="text-sm text-foreground/90">{skill.name}</span>
+                      <span className={`text-sm text-foreground/90 ${skill.textClassName || ''}`}>
+                        {skill.name}
+                      </span>
                     </motion.div>
                   ))}
                 </div>
