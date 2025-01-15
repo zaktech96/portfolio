@@ -110,6 +110,8 @@ const Hero = () => {
             <TextScramble
               className="text-2xl md:text-3xl text-foreground/90 font-medium"
               trigger={true}
+              duration={1.2}
+              speed={0.05}
             >
               Full Stack Developer | Problem Solver | Freelancer
             </TextScramble>
