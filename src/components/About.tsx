@@ -1,12 +1,10 @@
 "use client";
 
-import React from 'react';
 import { motion } from 'framer-motion';
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
-  SiGit, SiDocker, SiAmazon, SiVercel,
-  SiFigma, SiAdobexd
+  SiGit, SiDocker, SiAmazon, SiVercel
 } from 'react-icons/si';
 import { LightBulbIcon, ChatBubbleBottomCenterTextIcon, UserGroupIcon, SparklesIcon } from '@heroicons/react/24/outline';
 

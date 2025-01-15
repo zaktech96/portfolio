@@ -1,11 +1,11 @@
 "use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
+
+import { useEffect, useRef, useState } from "react";
+import { 
+  motion, 
+  useScroll, 
+  useTransform 
 } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
   title: string;
