@@ -1,36 +1,32 @@
+import quranImage from "./quran.png";
+import airlineImage from "./airline.png";
+import barakahImage from "./barakah.png";
+
 const Projects = () => {
   const projects = [
     {
-      title: "Project 1",
-      description: "A full-stack application built with React and Node.js. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      tech: ["React", "Node.js", "MongoDB"],
-      image: "/project1.jpg",
-      link: "#",
-      github: "#"
+      title: "Barakah board",
+      description: "A full-stack application built with typescript, Nextjs,supabase tailwindcss clerk auth and stripe payment to allow users to find and apply to jobs specifically for muslims" ,
+      tech: ["React", "TypeScript", "Nextjs", "Supabase", "Tailwindcss", "Clerk", "Stripe"],
+      image: barakahImage,
+      link: "https://www.barakahboard.pro/",
+      github: "https://github.com/code-and-creed/barakah-board"
     },
     {
-      title: "Project 2",
-      description: "E-commerce platform with payment integration",
-      tech: ["Next.js", "Stripe", "Prisma"],
-      image: "/project2.jpg",
-      link: "#",
-      github: "#"
+      title: "QuranSphere",
+      description: "Experience the Holy Quran in the Digital Age with beautiful recitations, precise translations, and a modern reading experience",
+      tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+      image: quranImage,
+      link: "https://quransphere.vercel.app/",
+      github: "https://github.com/zaktech96/Quran-player-app"
     },
     {
-      title: "Project 3",
-      description: "Real-time chat application",
-      tech: ["React", "Socket.io", "Express"],
-      image: "/project3.jpg",
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Project 4",
-      description: "Mobile-first web application",
-      tech: ["React Native", "Firebase", "Redux"],
-      image: "/project4.jpg",
-      link: "#",
-      github: "#"
+      title: "Airline tracker",
+      description: "Allows to search for flights and get the best deals using inbuilt flight api",
+      tech: ["React", "TypeScript", "Nextjs", "Tailwindcss",],
+      image: airlineImage,
+      link: "https://airline-discount-tracker-kh1r.vercel.app/",
+      github: "https://github.com/zaktech96/airline-discount-tracker"
     }
   ]
 
@@ -57,7 +53,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
@@ -66,7 +62,7 @@ const Projects = () => {
               {/* Project Image with Overlay */}
               <div className="relative aspect-[16/9] overflow-hidden">
                 <img 
-                  src={project.image} 
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />

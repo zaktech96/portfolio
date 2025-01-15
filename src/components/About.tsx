@@ -18,15 +18,15 @@ const About = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="card">
               <h3 className="text-xl font-bold mb-2">Frontend</h3>
-              <p className="text-gray-800-300">React, TypeScript, Tailwind CSS</p>
+              <p className="text-gray-800-300">React, TypeScript, Tailwind CSS, Next.js, JavaScript</p>
             </div>
             <div className="card">
               <h3 className="text-xl font-bold mb-2">Backend</h3>
-              <p className="text-gray-800-300">Node.js, Python, PostgreSQL</p>
+              <p className="text-gray-800-300">Node.js, Supabase, </p>
             </div>
             <div className="card">
               <h3 className="text-xl font-bold mb-2">Tools</h3>
-              <p className="text-gray-800-300">Git, Docker, AWS</p>
+              <p className="text-gray-800-300">Git, Docker</p>
             </div>
             <div className="card">
               <h3 className="text-xl font-bold mb-2">Soft Skills</h3>
