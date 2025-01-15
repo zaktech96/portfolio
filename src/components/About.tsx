@@ -5,7 +5,7 @@ import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss,
   SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
   SiGit, SiDocker, SiAmazon, SiVercel,
-  SiJavascript
+  SiJavascript, SiSupabase
 } from 'react-icons/si';
 import { LightBulbIcon, ChatBubbleBottomCenterTextIcon, UserGroupIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
@@ -30,7 +30,7 @@ const skills = [
       { name: 'Node.js', icon: <SiNodedotjs className="text-[#339933]" /> },
       { name: 'Express', icon: <SiExpress className="text-black dark:text-white" /> },
       { name: 'MongoDB', icon: <SiMongodb className="text-[#47A248]" /> },
-      { name: 'PostgreSQL', icon: <SiPostgresql className="text-[#4169E1]" /> }
+      { name: 'Supabase', icon: <SiSupabase className="text-[#3ECF8E]" /> }
     ]
   },
   { 
