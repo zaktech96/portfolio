@@ -13,7 +13,8 @@ export function ThemeToggle() {
       className="fixed top-6 right-8 p-2 rounded-xl 
                  bg-white/10 backdrop-blur-lg border border-white/20 
                  shadow-lg hover:shadow-xl dark:bg-black/10 dark:border-white/10
-                 transition-all duration-300 hover:scale-110 z-[100]"
+                 transition-all duration-300 hover:scale-110 z-[100]
+                 sm:block"
       whileHover={{ rotate: 15 }}
       whileTap={{ scale: 0.9 }}
       initial={{ opacity: 0, y: -20 }}

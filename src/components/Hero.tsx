@@ -89,14 +89,7 @@ const Hero = () => {
       </div>
       
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-        <div className="space-y-8">
-          {/* Welcome text */}
-          <div className="inline-block bg-card/80 backdrop-blur-sm px-6 py-2 rounded-md">
-            <p className="text-xl md:text-2xl lg:text-3xl text-primary font-semibold tracking-wide">
-     
-            </p>
-          </div>
-
+        <div className="space-y-8 pt-24">
           <GooeyText 
             texts={[
               "Hi, I'm Zakariye",
