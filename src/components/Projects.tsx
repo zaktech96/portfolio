@@ -1,6 +1,6 @@
 import quranImage from "./quran.png";
 import airlineImage from "./airline.png";
-import barakahImage from "./barakah.png";
+// import barakahImage from "./barakah.png";
 
 const TechIcon = ({ name }: { name: string }) => {
   switch (name) {
@@ -45,12 +45,12 @@ const TechIcon = ({ name }: { name: string }) => {
 const Projects = () => {
   const projects = [
     {
-      title: "Barakah board",
-      description: "A full-stack application built with typescript, Nextjs,supabase tailwindcss clerk auth and stripe payment to allow users to find and apply to jobs specifically for muslims" ,
+      title: "Job Board",
+      description: "A full-stack application built with typescript, Nextjs,supabase tailwindcss clerk auth and stripe payment to allow users to find and apply to jobs" ,
       tech: ["React", "TypeScript", "Nextjs", "Supabase", "Tailwindcss", "Clerk", "Stripe"],
-      image: barakahImage,
-      link: "https://www.barakahboard.pro/",
-      github: "https://github.com/code-and-creed/barakah-board"
+      // image: barakahImage,
+      // link: "https://www.barakahboard.pro/",
+      // github: "https://github.com/code-and-creed/barakah-board"
     },
     {
       title: "QuranSphere",
